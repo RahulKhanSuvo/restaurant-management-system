@@ -2,6 +2,7 @@ import Category from "../Category/Category";
 import Banner from "./Banner";
 import Feature from "./Feature";
 import PopularMenu from "./PopularMenu";
+import Testimonials from "./Testimonials";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
         <PopularMenu></PopularMenu>
       </section>
       <Feature></Feature>
+      <Testimonials></Testimonials>
     </div>
   );
 };
