@@ -46,13 +46,11 @@ const Category = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img className="w-full" src={slide4} alt="" />
-          <h3 className="text-3xl uppercase -mt-20 text-center text-white">
-            <h3
-              style={{ textShadow: "0 1px 0 var(--tw-shadow-color)" }}
-              className="text-3xl uppercase -mt-20 text-center  text-white"
-            >
-              desserts
-            </h3>
+          <h3
+            style={{ textShadow: "0 1px 0 var(--tw-shadow-color)" }}
+            className="text-3xl uppercase -mt-20 text-center  text-white"
+          >
+            desserts
           </h3>
         </SwiperSlide>
         <SwiperSlide>

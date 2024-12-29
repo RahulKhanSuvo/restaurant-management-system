@@ -1,13 +1,15 @@
 import Category from "../Category/Category";
 import Banner from "./Banner";
+import PopularMenu from "./PopularMenu";
 
 const Home = () => {
   return (
     <div>
       <Banner></Banner>
-      <div className="max-w-screen-xl mx-auto">
+      <section className="max-w-screen-xl mx-auto">
         <Category></Category>
-      </div>
+        <PopularMenu></PopularMenu>
+      </section>
     </div>
   );
 };
