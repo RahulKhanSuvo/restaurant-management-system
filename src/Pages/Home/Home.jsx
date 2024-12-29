@@ -1,5 +1,6 @@
 import Category from "../Category/Category";
 import Banner from "./Banner";
+import Feature from "./Feature";
 import PopularMenu from "./PopularMenu";
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
         <Category></Category>
         <PopularMenu></PopularMenu>
       </section>
+      <Feature></Feature>
     </div>
   );
 };
