@@ -30,46 +30,22 @@ const Banner = () => {
         className=""
       >
         <div>
-          <img
-            src={image1}
-            alt="Slide 1"
-            className="h-[780px] w-full object-cover" // Adjust height
-          />
+          <img src={image1} alt="Slide 1" className="h-[780px] w-full " />
         </div>
         <div>
-          <img
-            src={image2}
-            alt="Slide 2"
-            className="h-[780px] w-full object-cover" // Adjust height
-          />
+          <img src={image2} alt="Slide 2" className="h-[780px] w-full " />
         </div>
         <div>
-          <img
-            src={image3}
-            alt="Slide 3"
-            className="h-[780px] w-full object-cover" // Adjust height
-          />
+          <img src={image3} alt="Slide 3" className="h-[780px] w-full " />
         </div>
         <div>
-          <img
-            src={image4}
-            alt="Slide 4"
-            className="h-[780px] w-full object-cover" // Adjust height
-          />
+          <img src={image4} alt="Slide 4" className="h-[780px] w-full " />
         </div>
         <div>
-          <img
-            src={image5}
-            alt="Slide 5"
-            className="h-[780px] w-full object-cover" // Adjust height
-          />
+          <img src={image5} alt="Slide 5" className="h-[780px] w-full " />
         </div>
         <div>
-          <img
-            src={image6}
-            alt="Slide 6"
-            className="h-[780px] w-full object-cover" // Adjust height
-          />
+          <img src={image6} alt="Slide 6" className="h-[780px] w-full " />
         </div>
       </Carousel>
 
