@@ -1,8 +1,9 @@
 import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/autoplay";
 import { useEffect, useState } from "react";
 import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
@@ -21,7 +22,15 @@ const Testimonials = () => {
         subHeading={"---What Our Clients Say---"}
         heading={"TESTIMONIALS"}
       ></SectionTitle>
-      <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+      <Swiper
+        navigation={true}
+        modules={[Navigation, Autoplay]}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
+        className="mySwiper"
+      >
         {reviews.map((review) => (
           <SwiperSlide key={review._id}>
             <div className="text-center max-w-4xl mx-auto">
@@ -29,7 +38,7 @@ const Testimonials = () => {
                 <FaQuoteLeft />
               </div>
               <Rating
-                style={{ maxWidth: 120 }}
+                style={{ maxWidth: 180 }}
                 className="mx-auto"
                 value={review.rating}
                 readOnly
