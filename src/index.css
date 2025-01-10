@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.tab-item {
+  cursor: pointer;
+  color: #000;
+}
+
+.tab-item:hover {
+  color: #bb8506;
+}
+
+.tab-item-active {
+  text-decoration: underline; /* Active background color */
+  color: #bb8506; /* Active text color */
+  font-weight: bold; /* Bold text for active tab */
+}
