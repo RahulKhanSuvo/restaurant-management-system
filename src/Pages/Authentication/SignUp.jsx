@@ -2,8 +2,12 @@ import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import AuthContext from "../../Context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import GoogleButton from "../../Components/GoogleButton";
 
 const SignUp = () => {
+  const axiosPublic = useAxiosPublic();
   const { createUser, updateUserProfile } = useContext(AuthContext);
   const navigate = useNavigate();
   const {
@@ -20,10 +24,19 @@ const SignUp = () => {
         const logUser = result.user;
         console.log(logUser);
         updateUserProfile(data.name, data.photoUrl)
-          .then(() => {
-            console.log("user profile updated");
-            reset();
-            navigate("/");
+          .then(async () => {
+            const userInfo = {
+              name: data.name,
+              email: data.email,
+            };
+            try {
+              await axiosPublic.post("/users", userInfo);
+              Swal.fire("login successfully");
+              reset();
+              navigate("/");
+            } catch (error) {
+              console.log(error);
+            }
           })
           .catch((error) => {
             console.log(error);
@@ -125,6 +138,7 @@ const SignUp = () => {
               <button className="btn btn-primary">Sign Up</button>
             </div>
           </form>
+          <GoogleButton></GoogleButton>
         </div>
       </div>
     </div>
